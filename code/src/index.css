@@ -15,6 +15,21 @@ code {
     monospace;
 }
 
+header {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.border-line {
+  border: 1px solid #323232;
+  margin-bottom: 10px;
+}
+
 .album-list {
   width: 100%;
   display: flex;
@@ -33,6 +48,7 @@ code {
   margin: 15px;
   margin-bottom: 25px;
 }
+
 .image-container:hover .icons {
   opacity: 1;
 }
@@ -41,50 +57,45 @@ code {
 }
 
 .play:hover {
-  transform: scale(1.8);
-}
-/* 
-.album-container img {
-  width: 100%;
-  opacity: 1;
+  transform: scale(1.2);
 }
 
-.image-container:hover {
-  opacity: 0.5;
-}
-
-.icons:hover {
-  opacity: 1;
-  filter: brightness(25%);
-}
-*/
 .image-container {
   position: relative;
 }
 
+.album-cover {
+  width: 100%;
+}
+
 .icons {
+  width: 100%;
   display: flex;
   position: absolute;
+  opacity: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   justify-content: space-around;
+  align-items: center;
 }
 
-.icons img {
-  height: 50px;
-  width: 50px;
-  margin: 0 10px 0 10px;
+.play {
+  height: 70px;
+  width: 70px;
+  margin: 0 15px 0 15px;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.heart {
+  height: 30px;
+  width: 30px;
+  margin: 0 15px 0 15px;
 }
 
-.border-line {
-  border: 1px solid #323232;
-  margin-bottom: 30px;
+.dots {
+  height: 30px;
+  width: 30px;
+  margin: 0 15px 0 15px;
 }
 
 h2 {
@@ -118,10 +129,38 @@ h2:hover {
 
 h3:hover {
   text-decoration-line: underline;
-  color: #fff;
+  color: #a0a0a0a0;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 968px) {
+  .album-container {
+    width: 40%;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .album-container {
+    width: 80%;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024) {
+  .album-container {
+    width: 100%;
+  }
 }
