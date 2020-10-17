@@ -1,26 +1,21 @@
 import React from 'react';
+import { Artists } from './Artists'
 
 
-
-  export const AlbumContainer = (props) => {
-
+export const AlbumContainer = (props) => {
   return (
-
-    <section>
-      <div className="album-container">
-        <img src={props.image} alt="album cover"/>
-        <h2>{props.title}</h2>
-        <a href="{props.artistPage}"><h3>{props.artist}</h3></a>
+    <div className="album-container">
+      <div className="image-container">
+        <img src={props.image} alt="album cover" />
+        <div className="icons">
+          <img className="dots" src="./icons/dots.svg" alt="three dots" />
+          <img className="play" src="./icons/play.svg" alt="play icon" />
+          <img className="heart" src="./icons/heart.svg" alt="heart" />
+        </div>
       </div>
-      <div className="icons">
-          <img src="./icons/dots.svg" alt="three dots"/>
-          <img src="./icons/play.svg" alt="play icon"/>
-          <img src="./icons/heart.svg" alt="heart"/>
-      </div>
-   
-    
-    </section>
 
+      <a href={props.albumPage}><h2>{props.title}</h2></a>
+      <Artists artistsInfo={props} />
+    </div>
   );
 }
-

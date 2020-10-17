@@ -15,40 +15,66 @@ code {
     monospace;
 }
 
-section {
+.album-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .album-container {
-  width: 20%;
-  height: 450px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0px;
-  margin: 5%;
+  width: 22%;
+  box-sizing: border-box;
+  margin: 15px;
+  margin-bottom: 25px;
+}
+.image-container:hover .icons {
+  opacity: 1;
+}
+.image-container:hover img {
+  opacity: 0.5;
+}
+
+.play:hover {
+  transform: scale(1.8);
+}
+/* 
+.album-container img {
+  width: 100%;
+  opacity: 1;
+}
+
+.image-container:hover {
+  opacity: 0.5;
+}
+
+.icons:hover {
+  opacity: 1;
+  filter: brightness(25%);
+}
+*/
+.image-container {
   position: relative;
 }
 
-/* .album-container img {
-  width: 250px;
-  height: 250px;
-} */
 .icons {
   display: flex;
-  width: 100%;
-  justify-content: center;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-around;
 }
+
 .icons img {
   height: 50px;
   width: 50px;
-  background-color: tomato;
+  margin: 0 10px 0 10px;
 }
 
 h1 {
@@ -57,38 +83,45 @@ h1 {
 }
 
 .border-line {
-  border: 1px solid rgb(50, 50, 50);
+  border: 1px solid #323232;
   margin-bottom: 30px;
 }
 
 h2 {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   color: #ffffff;
-  padding: 0;
-  width: fit-content;
 }
 
-h3 {
+h3,
+.artist-container a {
+  display: inline;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
   margin-top: 0px;
   color: #a0a0a0a0;
-  padding: 0;
-  width: fit-content;
 }
+
+.icons img {
+  opacity: 0.5;
+}
+
+.icons img:hover {
+  opacity: 1;
+}
+
 h2:hover {
-  border-bottom: 1px solid #fff;
+  text-decoration-line: underline;
 }
 
 h3:hover {
-  border-bottom: 1px solid #fff;
+  text-decoration-line: underline;
   color: #fff;
 }
 
 a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #fff;
 }

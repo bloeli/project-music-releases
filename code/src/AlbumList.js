@@ -1,26 +1,26 @@
 import React from 'react';
 import { AlbumContainer } from './AlbumContainer'
 
-// console.log(props);
+
 
 const AlbumList = (props) => {
-
-  const AlbumArray = props.dataList.albums.items;
-  // console.log(AlbumArray);
+  const albumArray = props.dataList.albums.items;
 
   return (
-    <section className="albumList">
-      {AlbumArray.map((album) => {
+    <section className="album-list">
+      {albumArray.map(album => {
         return (
-            <AlbumContainer 
-                title={album.name}
-                image={album.images[1].url}
-                artist={album.artists[0].name}
-                artistPage={album.artists[0].external_urls.spotify}
-            />
-        ); 
-        })}
+          <AlbumContainer
+            key={album.name}
+            title={album.name}
+            image={album.images[1].url}
+            artist={album.artists}
+            albumPage={album.external_urls.spotify}
+          />
+        );
+      })}
     </section>
-  )}
+  )
+}
 
 export default AlbumList
