@@ -1,5 +1,5 @@
 # Music Releases
-Re-create a given Spotify template, using React.
+Re-create a given Spotify template, using React. Team project by Bäm, Nadia & Elisa, october 2020.
 
 ## The problem
 
