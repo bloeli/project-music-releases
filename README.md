@@ -1,5 +1,5 @@
 # Music Releases
-Re-create a given Spotify template, using React. Team project by Bäm, Nadia & Elisa, october 2020.
+Re-create a given Spotify template, using React. Team project by Bäm, Nadia & Elisa, Technigo Frontend Bootcamp, october 2020.
 
 ## The problem
 
@@ -10,4 +10,4 @@ If we had more time we would add a sidebar.
 
 ## View it live
 
-https://priceless-albattani-162000.netlify.app/
+https://project-music-releases.netlify.app/
